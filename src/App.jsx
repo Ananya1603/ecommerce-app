@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <nav>
+        <Link to="/">Home</Link> |{" "}
         <Link to="/register">Register</Link> |{" "}
         <Link to="/login">Login</Link> |{" "}
         <Link to="/catalogue">Catalogue</Link> |{" "}
@@ -19,6 +20,7 @@ function App() {
       </nav>
 
       <Routes>
+        <Route path="/" element={<h2>Welcome to Ecommerce App</h2>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/catalogue" element={<Catalogue />} />
