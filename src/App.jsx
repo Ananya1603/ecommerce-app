@@ -6,21 +6,32 @@ import Cart from './pages/Cart'
 import Contact from './pages/Contact'
 import About from './pages/About'
 
-function App() {
+function Home() {
   return (
     <div>
+      <h2>Welcome to Ecommerce App</h2>
+      <p>This is the home page.</p>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div className="container">
+      <h1>Ecommerce Website</h1>
+
       <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/register">Register</Link> |{" "}
-        <Link to="/login">Login</Link> |{" "}
-        <Link to="/catalogue">Catalogue</Link> |{" "}
-        <Link to="/cart">Cart</Link> |{" "}
-        <Link to="/contact">Contact</Link> |{" "}
+        <Link to="/">Home</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/catalogue">Catalogue</Link>
+        <Link to="/cart">Cart</Link>
+        <Link to="/contact">Contact</Link>
         <Link to="/about">About</Link>
       </nav>
 
       <Routes>
-        <Route path="/" element={<h2>Welcome to Ecommerce App</h2>} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/catalogue" element={<Catalogue />} />
